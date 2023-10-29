@@ -324,7 +324,7 @@ border-radius: 50%;
   height: 12vh;
     text-align: center;
     background-color: beige;
-    background-size:cover;
+    background-size:contain;
     background-repeat: no-repeat;
 }
 .h00{
