@@ -198,7 +198,7 @@ function Home({ onSearch }) {
           <Grid container spacing={2}>
             <Grid item xs={4} md={4}>
               <img src="./image/img0.png" className="img0"></img>
-              <h3>Start your free trial</h3>
+              <h3 className="hyhy">Start your free trial</h3>
               <p>
                 Sign up for a free 30-day trial. Your first audiobook is free, yours to keep even if you cancel.
               </p>
@@ -206,14 +206,14 @@ function Home({ onSearch }) {
             </Grid>
             <Grid item xs={4} md={4}>
               <img src="./image/img1.png" className="img1"></img>
-              <h3>Listen anytime, anywhere</h3>
+              <h3 className="hyhy">Listen anytime, anywhere</h3>
               <p>
                 Download the free Audible app to listen while cooking, doing chores, heading to work or before bed.
               </p>
             </Grid>
             <Grid item xs={4} md={4}>
               <img src="./image/img2.png" className="img2"></img>
-              <h3>Entertainment for hours</h3>
+              <h3 className="hyhy">Entertainment for hours</h3>
               <p>
                 Listen all you want to The Plus Catalogue—thousands of Audible Originals, audiobooks and podcasts.
               </p>
