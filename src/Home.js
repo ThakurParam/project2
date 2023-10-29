@@ -15,9 +15,9 @@ import { Data } from "./Data";
 import { Rost } from "./Rost";
 import Sign from "./Sign";
 import { useNavigate } from 'react-router-dom';
-
+import DoneIcon from '@mui/icons-material/Done';
 function Home({ onSearch }) {
-  // const navigate = useNavigate( )
+  const navigate = useNavigate( )
   const [query, setQuery] = useState('');
   const [data, setData] = useState(Data);
   const [rost, setRost] = useState(Rost);
@@ -36,7 +36,7 @@ function Home({ onSearch }) {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-  const cont = {
+  const connnt = {
     height: {
       xs:'20vh',
       md:'60vh',
@@ -46,16 +46,9 @@ function Home({ onSearch }) {
       md:'60%',
     },
     mx: 'auto',
-    backgroundImage: 'url("../image/Banner.jpg")',
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-   
-
-   
-
   }
   const coont = {
-    marginTop:'5px',
+    marginTop:'30px',
     width: {
       md:'60%',
       xs:'100%',
@@ -63,35 +56,42 @@ function Home({ onSearch }) {
     mx: 'auto',
    
   }
+  
   return (
 
     <>
       <body>
         <Container sx={{
           width: '60%',
-          mx: 'auto',
+         mx: 'auto',
+         '@media (max-width: 600px)': {
+          backgroundColor: 'red',
+          display: 'contents',
+         }
         }}>
 
           <Grid container spacing={2}>
-            <Grid item sx={6} md={6}>
-              <img src="./image/ama.png"></img>
+            <Grid item xs={6} md={6} sx={{ textAlign:'justify'
+           }}>
+              <img src="./image/ama.png" className="bdcd"></img>
               <div>
                 <button> Home</button>
                 <button> Browse</button>
                 <button> About Memberships</button></div>
 
             </Grid>
-            <Grid item sx={6}>
+            <Grid item xs={6} md={6} sx={{textAlign:'end'}} >
               <div>
-                <button>help</button>
-                <button >Sign In</button></div>
-                {/* onClick={()=>navigate(Sign)} */}
-              <div className="search-bar-container">
+                <button onClick={()=>navigate('/Help')}>help</button>
+                <button onClick={()=>navigate('/Sign')} >| Sign In</button></div>
+                
+              <div className="000h">
                 <input
                   type="text"
                   placeholder="Search..."
                   value={query}
                   onChange={(e) => setQuery(e.target.value)}
+                 
                 />
                 <button onClick={handleSearch}>Search</button>
               </div>
@@ -99,26 +99,36 @@ function Home({ onSearch }) {
           </Grid>
         </Container>
         <div className="d1">
-
+          <Container className="cvb">
+<Box>
+  <p className="poi">Listen to audiobooks,</p>
+  <p className="poj">podcasts, Audible Originals</p>
+  <p className="poj">and more</p>
+  <button className="btn00000">Start your Free Trial for 90days</button>
+              <p className="p05">₹199 per month after 30-day trial. Cancel anytime. </p>
+</Box></Container>
         </div>
         <Container style={coont} className="coont">
           <Grid container spacing={1}>
             <Grid item xs={6} md={6} className="g00">
               <Box>
-              <h2>
+              <h2 className="h000">
                 What you get?
               </h2>
-              <p className="p000" >Your free, 30-day trial comes with:</p>
+              <p className="p001" >Your free, 30-day trial comes with:</p>
 
               <p className="p000">
-                1 credit (2 credits for Amazon Prime members new to Audible), to use on any title of your choice—yours to keep, even if you cancel.
+              <DoneIcon /> 1 credit (2 credits for Amazon Prime members new to Audible), to use on any title of your choice—yours to keep, even if you cancel.
               </p>
               <p className="p000">
-                The Plus Catalogue—listen all you want to thousands of audiobooks, podcasts, and Audible Originals.
+              <DoneIcon />   The Plus Catalogue—listen all you want to thousands of audiobooks, podcasts, and Audible Originals.
               </p>
               <p className="p000">
-                No commitment—cancel anytime.
-              </p></Box></Grid>
+              <DoneIcon />  No commitment—cancel anytime.
+              </p>
+              <button className="btn000">Start your Free Trial for 90days</button>
+              <p className="p04">₹199 per month after 30-day trial. Cancel anytime. </p>
+              </Box></Grid>
             <Grid item xs={6} md={6}  >
               <Box className="g01">
 
@@ -147,9 +157,9 @@ function Home({ onSearch }) {
             </Box>
             <TabPanel value="1"> 
               <Grid container spacing={2}>
-                {data.map((item, index) => (
+                {data.map((items, index) => (
                   <Grid item sm ={2} md={2} key={index}>
-                    <Card item={item} />
+                    <Card item={items} />
                   </Grid>
                 ))}
 
@@ -157,27 +167,29 @@ function Home({ onSearch }) {
               </Grid>
             </TabPanel>
             <TabPanel value="2">
+              <Box>
               <Grid container spacing={2}>
-                {rost.map((item, index) => (
+                {rost.map((items, index) => (
                   <Grid item sm={2}  md={2} key={index}>
-                    <Card />
+                    <Card item={items} />
                   </Grid>
                 ))}
-              </Grid>
+              </Grid></Box>
             </TabPanel>
             <TabPanel value="3"> <Grid container spacing={2}>
-              {data.map((item, index) => (
-                <Grid item xs={4} md={2} key={index}>
-                  <Card />
+              {data.map((items, index) => (
+                <Grid item sm={2} md={2} key={index}>
+                  <Card item={items} />
                 </Grid>
               ))}
             </Grid>
             </TabPanel>
           </TabContext>
         </Container>
-        <Container style={cont} >
+        <Box>
+          <img src="../image/Banner.jpg" className='bb00'></img>
 
-        </Container>
+        </Box>
         <p className="p01">
           Try Audible free</p>
         <p className="p02">It's easy to get started
@@ -210,11 +222,15 @@ function Home({ onSearch }) {
           <button className="btn00">Start your Free Trial for 90days</button>
           <p className="p03">₹199 per month after 30-day trial. Cancel anytime. </p>
         </Container>
+        <Box >
+<img src="../image/banner2.jpg" className='bb00'></img>
+        </Box>
         <div className="d00">
           <Container sx={{
             textAlign: 'initial',
             width: '60%',
             mx: 'auto',
+            
 
           }}>
             <h1 className="h00">
