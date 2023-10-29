@@ -1,4 +1,5 @@
-.App {
+ .App {
+
   text-align: center;
 }
 
@@ -35,4 +36,236 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.d0{
+  background-color: rgb(240, 182, 182);
+  text-align: center;
+}
+.drawer-container {
+  display: flex;
+}
+
+.drawer {
+  width: 250px;
+  background-color: #333;
+  color: white;
+  transition: transform 0.3s;
+  transform: translateX(-250px);
+}
+
+.drawer.open {
+  transform: translateX(0);
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
+button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+li:hover {
+  background-color: #555;
+}
+
+.d1{
+  height: 40vh;
+  text-align: -webkit-center;
+  background-color: beige;
+  background-image: url('../public/image/aud.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+.d00{
+  color:aliceblue ;
+  background-color: black;
+  height: 30vh;
+}
+body{
+  text-align: center;
+}
+.g00{
+  text-align: justify;
+  font-size: 24px;
+  font-weight: 500;
+ 
+}
+.coont{
+  margin-top: 5px;
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+.g01{
+  height: 100%;
+  width: 100%;
+  background-image: url('../public/image/bg2.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.p00{
+  text-decoration: underline;
+}
+.b0{
+  margin-top: -5px;
+  font-size: 15px;
+  display: flex;
+  flex-direction: row;
+color: #000000;
+}
+.b0:hover{
+  text-decoration: underline;
+}
+.b1{
+  margin-top: -5px;
+  font-size: 15px;
+  display: flex;
+  flex-direction: row ;
+color: rgb(0, 0, 0);
+}
+.b1:hover{
+  text-decoration: underline;
+}
+.b2{
+  margin-top: -5px;
+  font-size: 15px;
+  display: flex;
+  flex-direction: row;
+color: #000000;
+}
+.b2:hover{
+  text-decoration: underline;
+}
+.div00{
+  padding: 40px;
+margin-left: 30px;
+}
+button{
+  font-size: 10px;
+  color: #000000;}
+button:hover{
+text-decoration: underline;
+
+}
+.btn00{
+  margin-top: 40px;
+  border-radius: 10px;
+  font-size: 30px;
+  background-color: #fd8f07;
+  font-size: 10px;
+  color: #000000;
+}
+.btn00:hover{
+  text-decoration: underline;
+}
+.search-bar-container{
+  margin-top: 30px;
+}
+.p01{
+  margin-top: 40px;
+  font-size: 20px;
+  font-weight: 700;
+}
+.p02{
+  margin-top: -5px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+.p03{
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+.img0{
+height: auto;
+width: auto;
+border-radius: 50%;
+}
+.img1{
+  height: auto;
+  width: auto; 
+  border-radius: 50%;
+}
+.img2{
+  height: auto;
+  width: auto; 
+  border-radius: 50%;
+}
+.pp0{
+  margin-top: -15px;
+  margin-bottom: 2px;
+}
+.pp1{
+  margin-top: 1px;
+}
+.p000{
+  font-size: 20px;
+}
+@media screen and (max-width: 600px) {
+  .coont{
+   
+    width: 100%;
+  }
+  .g00{
+    text-align: justify;
+    font-size: 15px;
+  }
+.p000{
+  font-size: 12px;
+}
+.d1{
+  height: 40vh;
+  text-align: -webkit-center;
+  background-color: beige;
+  background-image: url('../public/image/aud.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+.coont{
+  width: 100%;
+}
+.div00 {
+  margin-top: 5px;
+  padding: 0px;
+  margin-left: 0px;
+}
+
+.img0{
+  width: -webkit-fill-available;
+}
+.img1{
+  width: -webkit-fill-available;
+}
+.img2{
+  width: -webkit-fill-available; 
+}
+.d1{
+  height: 12vh;
+    text-align: center;
+    background-color: beige;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+
 }
