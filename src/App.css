@@ -219,6 +219,9 @@ border-radius: 50%;
 .p000{
   font-size: 20px;
 }
+.h00{
+  padding-top: 10px;
+}
 @media screen and (max-width: 600px) {
   .coont{
    
@@ -229,7 +232,7 @@ border-radius: 50%;
     font-size: 15px;
   }
 .p000{
-  font-size: 12px;
+  font-size: 8px;
 }
 .d1{
   height: 40vh;
@@ -265,7 +268,26 @@ border-radius: 50%;
     background-size: contain;
     background-repeat: no-repeat;
 }
+.h00{
+  padding: 0px;
+  font-size: 20px;
+}
+.p0p{
+  margin-top: -5px;
+}
+.p01 {
+  margin-top: 40px;
+  font-size: 16px;
+  font-weight: 700;
+}
 
+.p02 {
+  margin-top: -10px;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
 
-
+.div01{
+  text-align: -webkit-center;
+}
 }

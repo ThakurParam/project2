@@ -134,21 +134,21 @@ function Home({ onSearch }) {
         <p className="p02">Here are some of our top picks to get you started</p>
 
         <Container sx={{
-          width: { md: '60%', xs: '95%' },
+          width: { md: '60%', xs: '100%' },
           mx: 'auto',
         }}>
           <TabContext value={value}>
             <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-              <TabList onChange={handleChange} aria-label="lab API tabs example" className="tab00">
-                <Tab label="Best Seller" value="1"  className="tab0"/>
-                <Tab label="Audible Originals" value="2"  className="tab0"/>
-                <Tab label="Podcasts" value="3"  className="tab0"/>
+              <TabList onChange={handleChange} aria-label="lab API tabs example" >
+                <Tab label="Best Seller" value="1" sx={{fontSize:'12px'}} />
+                <Tab label="Audible Originals" value="2"  sx={{fontSize:'12px'}}  />
+                <Tab label="Podcasts" value="3"  sx={{fontSize:'12px'}} />
               </TabList>
             </Box>
             <TabPanel value="1"> 
               <Grid container spacing={2}>
                 {data.map((item, index) => (
-                  <Grid item xs={2} md={2} key={index}>
+                  <Grid item sm ={2} md={2} key={index}>
                     <Card item={item} />
                   </Grid>
                 ))}
@@ -159,7 +159,7 @@ function Home({ onSearch }) {
             <TabPanel value="2">
               <Grid container spacing={2}>
                 {rost.map((item, index) => (
-                  <Grid item xs={3} sm={3} md={2} key={index}>
+                  <Grid item sm={2}  md={2} key={index}>
                     <Card />
                   </Grid>
                 ))}
@@ -167,7 +167,7 @@ function Home({ onSearch }) {
             </TabPanel>
             <TabPanel value="3"> <Grid container spacing={2}>
               {data.map((item, index) => (
-                <Grid item xs={2} md={2} key={index}>
+                <Grid item xs={4} md={2} key={index}>
                   <Card />
                 </Grid>
               ))}
@@ -217,22 +217,20 @@ function Home({ onSearch }) {
             mx: 'auto',
 
           }}>
-            <h1 sx={{
-              padding: '10px   '
-            }}>
+            <h1 className="h00">
               Frequently Asked Questions
             </h1>
-            <p>
+            <p className="p0p">
               How does the free trial work?
             </p>
-            <p>
+            <p className="p0p">
               What is included with my Audible Premium Plus membership?
             </p>
-            <p>
+            <p className="p0p">
 
               Are there additional benefits for Amazon Prime members?
             </p>
-            <p>
+            <p className="p0p">
               What happens if I want to cancel?
             </p>
           </Container>
@@ -240,7 +238,10 @@ function Home({ onSearch }) {
         <Container sx={{
 
           display: 'flex',
-          width: '60%',
+          width: {
+            md:'60%',
+            xs:'100%',
+          },
           mx: 'auto',
 
         }}>
@@ -255,7 +256,7 @@ function Home({ onSearch }) {
                 <button className="b0">Audible Suno</button>
                 <button className="b0">Facebook</button></div></Grid>
             <Grid item xs={4} md={4}>
-              <div className="div00">
+              <div className="div01">
                 <button className="b1">Twitter</button>
                 <button className="b1">Instagram</button>
                 <button className="b1">Learn more about Audible</button>
@@ -264,7 +265,7 @@ function Home({ onSearch }) {
                 <button className="b1">New Releases</button>
                 <button className="b1">Indian Listens</button></div></Grid>
             <Grid item xs={4} md={4}>
-              <div className="div00">
+              <div className="div01">
                 <button className="b2">Hindi Audiobooks</button>
                 <button className="b2">Free Shows & Audiobooks</button>
                 <button className="b2">Mysteries & Thrillers</button>
