@@ -379,18 +379,25 @@ function Home({ onSearch }) {
                 onChange={handleChange}
                 aria-label="lab API tabs example"
               >
-                <Tab label="Best Seller" value="1" sx={{ fontSize: "12px" }} />
+                <Tab label="Best Seller" value="1" sx={{ fontSize: "12px",
+                fontWeight:'600',
+              '@media (max-width: 600px)': {padding:'10px'}
+              }} />
                 <Tab
                   label="Audible Originals"
                   value="2"
-                  sx={{ fontSize: "12px" }}
+                  sx={{ fontSize: "12px",fontWeight:'600',
+                  '@media (max-width: 600px)': {padding:'10px'}
+                }}
                 />
-                <Tab label="Podcasts" value="3" sx={{ fontSize: "12px" }} />
+                <Tab label="Podcasts" value="3" sx={{ fontSize: "12px",fontWeight:'600',
+              '@media (max-width: 600px)': {padding:'10px'}
+              }} />
               </TabList>
             </Box>
             <TabPanel value="1"sx={{
               '@media (max-width: 600px)': {
-                padding:'6px'
+                padding:'10px'
               }
             }}>
               <Grid container spacing={2}>
