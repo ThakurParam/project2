@@ -520,8 +520,8 @@ function Home({ onSearch }) {
               <div className="div01" >
                 <button className="b1">Twitter</button>
                 <button className="b1">Instagram</button>
-                <button className="b1">Learn more about Audible</button>
-                <button className="b1">Learn about membership</button>
+                <button className="b1">Learn about Audible</button>
+                <button className="b1">Learn  membership</button>
                 <button className="b1">Best Sellers</button>
                 <button className="b1">New Releases</button>
                 <button className="b1">Indian Listens</button>
