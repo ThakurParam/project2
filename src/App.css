@@ -104,6 +104,8 @@ li:hover {
   margin-top: -26px;
 }
 body{
+  margin: 1px;
+
   text-align: center;
 }
 .g00{
@@ -305,6 +307,7 @@ border-radius: 50%;
 
 }
 
+
 .div00 {
   margin-top: 5px;
   padding: 0px;
@@ -382,7 +385,8 @@ border-radius: 50%;
   margin-left: 26px;
 }
 .bdcd{
-  margin-left: -20px;
+  width: 60%;
+  margin-left: 0px;
 }
 
 .poi{
