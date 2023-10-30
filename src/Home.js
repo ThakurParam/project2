@@ -316,28 +316,40 @@ function Home({ onSearch }) {
                 <p className="p001">Your free, 30-day trial comes with:</p>
 
                 <p className="p000">
-                  <DoneIcon sx={{
-                    fontSize: '15px',
-                     '@media (max-width: 600px)': {
-                      fontSize: '10px', }
-                  }}/> 1 credit (2 credits for Amazon Prime members new
-                  to Audible), to use on any title of your choice—yours to keep,
-                  even if you cancel.
+                  <DoneIcon
+                    sx={{
+                      fontSize: "15px",
+                      "@media (max-width: 600px)": {
+                        fontSize: "10px",
+                      },
+                    }}
+                  />{" "}
+                  1 credit (2 credits for Amazon Prime members new to Audible),
+                  to use on any title of your choice—yours to keep, even if you
+                  cancel.
                 </p>
                 <p className="p000">
-                  <DoneIcon  sx={{
-                        fontSize: '15px',
-                     '@media (max-width: 600px)': {
-                      fontSize: '10px', }
-                  }}/> The Plus Catalogue—listen all you want to
-                  thousands of audiobooks, podcasts, and Audible Originals.
+                  <DoneIcon
+                    sx={{
+                      fontSize: "15px",
+                      "@media (max-width: 600px)": {
+                        fontSize: "10px",
+                      },
+                    }}
+                  />{" "}
+                  The Plus Catalogue—listen all you want to thousands of
+                  audiobooks, podcasts, and Audible Originals.
                 </p>
                 <p className="p000">
-                  <DoneIcon  sx={{
-                    fontSize: '15px',
-                     '@media (max-width: 600px)': {
-                      fontSize: '10px', }
-                  }}/> No commitment—cancel anytime.
+                  <DoneIcon
+                    sx={{
+                      fontSize: "15px",
+                      "@media (max-width: 600px)": {
+                        fontSize: "10px",
+                      },
+                    }}
+                  />{" "}
+                  No commitment—cancel anytime.
                 </p>
                 <button className="btn000">
                   Start your Free Trial for 90days
@@ -376,7 +388,11 @@ function Home({ onSearch }) {
                 <Tab label="Podcasts" value="3" sx={{ fontSize: "12px" }} />
               </TabList>
             </Box>
-            <TabPanel value="1">
+            <TabPanel value="1"sx={{
+              '@media (max-width: 600px)': {
+                padding:'6px'
+              }
+            }}>
               <Grid container spacing={2}>
                 {data.map((items, index) => (
                   <Grid item sm={6} md={2} key={index}>
