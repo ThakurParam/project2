@@ -275,7 +275,12 @@ function Home({ onSearch }) {
                 <button onClick={() => navigate("/Sign")}>| Sign In</button>
               </div>
 
-              <div className="000h">
+              <Box className="000h" sx={{width:{
+                md:"100%",
+                xs:'180px',
+                
+              },
+              textAlign:'end'}}>
                 <input
                   type="text"
                   placeholder="Search..."
@@ -283,13 +288,12 @@ function Home({ onSearch }) {
                   onChange={(e) => setQuery(e.target.value)}
                   style={{
                     width: "100%",
-                    "@media (max-width: 600px)": {
-                      backgroundColor: "red",
-                    },
+                    
+                    
                   }}
                 />
                 <button onClick={handleSearch}>Search</button>
-              </div>
+              </Box>
             </Grid>
           </Grid>
         </Container>
@@ -367,9 +371,9 @@ function Home({ onSearch }) {
         <p className="p01">Bring words to life with Audible</p>
         <p className="p02">Here are some of our top picks to get you started</p>
 
-        <Container
+        <Box
           sx={{
-            width: { md: "60%", xs: "100%" },
+            width: { md: "60%", xs: "101%" },
             mx: "auto",
           }}
         >
@@ -400,7 +404,7 @@ function Home({ onSearch }) {
                 padding:'10px'
               }
             }}>
-              <Grid container spacing={2}>
+              <Grid container spacing={2} justifyContent={"center"}>
                 {data.map((items, index) => (
                   <Grid item sm={6} md={2} key={index}>
                     <Card item={items} />
@@ -410,7 +414,7 @@ function Home({ onSearch }) {
             </TabPanel>
             <TabPanel value="2">
               <Box>
-                <Grid container spacing={2}>
+                <Grid container spacing={2} justifyContent={"center"}>
                   {rost.map((items, index) => (
                     <Grid item sm={6} md={2} key={index}>
                       <Card item={items} />
@@ -420,8 +424,8 @@ function Home({ onSearch }) {
               </Box>
             </TabPanel>
             <TabPanel value="3">
-              {" "}
-              <Grid container spacing={2}>
+              
+              <Grid container spacing={2} justifyContent={"center"}>
                 {data.map((items, index) => (
                   <Grid item sm={6} md={2} key={index}>
                     <Card item={items} />
@@ -430,8 +434,8 @@ function Home({ onSearch }) {
               </Grid>
             </TabPanel>
           </TabContext>
-        </Container>
-        <Box sx={{ marginTop: "50px" }}>
+        </Box>
+        <Box sx={{ marginTop: "50px" }} >
           <img src="../image/Banner.jpg" className="bb00"></img>
         </Box>
         <p className="p01">Try Audible free</p>
@@ -513,11 +517,11 @@ function Home({ onSearch }) {
               </div>
             </Grid>
             <Grid item xs={4} md={4}>
-              <div className="div01">
+              <div className="div01" >
                 <button className="b1">Twitter</button>
                 <button className="b1">Instagram</button>
                 <button className="b1">Learn more about Audible</button>
-                <button className="b1">Learn more about membership</button>
+                <button className="b1">Learn about membership</button>
                 <button className="b1">Best Sellers</button>
                 <button className="b1">New Releases</button>
                 <button className="b1">Indian Listens</button>

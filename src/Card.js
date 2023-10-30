@@ -20,9 +20,12 @@ export default function Card({item}) {
     const value = 4.5;
     return (
         <>
-            <Box>
+            <Box sx={{width:{
+                md:'100%',
+                xs:'130px'
+            }}}>
                 <Box>
-                    <img src={item.cover} className='iiii0' ></img>
+                    <img src={item.cover} style={{width:'100%', height:'auto'}} ></img>
                     
                 </Box>
                 <Box>
