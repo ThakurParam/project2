@@ -22,7 +22,7 @@ export default function Card({item}) {
         <>
             <Box>
                 <Box>
-                    <img src={item.cover} className='iiii0'></img>
+                    <img src={item.cover} className='iiii0' ></img>
                     
                 </Box>
                 <Box>

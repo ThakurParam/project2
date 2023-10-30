@@ -317,7 +317,8 @@ function Home({ onSearch }) {
 
                 <p className="p000">
                   <DoneIcon sx={{
-                     '@media (min-width: 600px)': {
+                    fontSize: '15px',
+                     '@media (max-width: 600px)': {
                       fontSize: '10px', }
                   }}/> 1 credit (2 credits for Amazon Prime members new
                   to Audible), to use on any title of your choice—yours to keep,
@@ -325,14 +326,16 @@ function Home({ onSearch }) {
                 </p>
                 <p className="p000">
                   <DoneIcon  sx={{
-                     '@media (min-width: 600px)': {
+                        fontSize: '15px',
+                     '@media (max-width: 600px)': {
                       fontSize: '10px', }
                   }}/> The Plus Catalogue—listen all you want to
                   thousands of audiobooks, podcasts, and Audible Originals.
                 </p>
                 <p className="p000">
                   <DoneIcon  sx={{
-                     '@media (min-width: 600px)': {
+                    fontSize: '15px',
+                     '@media (max-width: 600px)': {
                       fontSize: '10px', }
                   }}/> No commitment—cancel anytime.
                 </p>
@@ -376,7 +379,7 @@ function Home({ onSearch }) {
             <TabPanel value="1">
               <Grid container spacing={2}>
                 {data.map((items, index) => (
-                  <Grid item sm={2} md={2} key={index}>
+                  <Grid item sm={6} md={2} key={index}>
                     <Card item={items} />
                   </Grid>
                 ))}
