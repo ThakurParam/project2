@@ -324,11 +324,17 @@ function Home({ onSearch }) {
                   even if you cancel.
                 </p>
                 <p className="p000">
-                  <DoneIcon /> The Plus Catalogue—listen all you want to
+                  <DoneIcon  sx={{
+                     '@media (min-width: 600px)': {
+                      fontSize: '10px', }
+                  }}/> The Plus Catalogue—listen all you want to
                   thousands of audiobooks, podcasts, and Audible Originals.
                 </p>
                 <p className="p000">
-                  <DoneIcon /> No commitment—cancel anytime.
+                  <DoneIcon  sx={{
+                     '@media (min-width: 600px)': {
+                      fontSize: '10px', }
+                  }}/> No commitment—cancel anytime.
                 </p>
                 <button className="btn000">
                   Start your Free Trial for 90days
