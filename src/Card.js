@@ -32,7 +32,7 @@ export default function Card({item}) {
                 </Box>
                 <Box >
                     <p className='pp1'>Narrated by :</p>
-                    <p className='pp0' >item.Narratedby</p>
+                    <p className='pp0' >{item.Narratedby}</p>
                     
                     <Rating
                         name="text-feedback"

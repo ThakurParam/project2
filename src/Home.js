@@ -379,7 +379,7 @@ function Home({ onSearch }) {
             <TabPanel value="1">
               <Grid container spacing={2}>
                 {data.map((items, index) => (
-                  <Grid item sm={6} md={2} key={index}>
+                  <Grid item xs={6} md={2} key={index}>
                     <Card item={items} />
                   </Grid>
                 ))}
@@ -389,7 +389,7 @@ function Home({ onSearch }) {
               <Box>
                 <Grid container spacing={2}>
                   {rost.map((items, index) => (
-                    <Grid item sm={2} md={2} key={index}>
+                    <Grid item xs={6} md={2} key={index}>
                       <Card item={items} />
                     </Grid>
                   ))}
@@ -400,7 +400,7 @@ function Home({ onSearch }) {
               {" "}
               <Grid container spacing={2}>
                 {data.map((items, index) => (
-                  <Grid item sm={2} md={2} key={index}>
+                  <Grid item xs={6} md={2} key={index}>
                     <Card item={items} />
                   </Grid>
                 ))}
