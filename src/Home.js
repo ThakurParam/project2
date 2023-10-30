@@ -16,6 +16,10 @@ import { Rost } from "./Rost";
 import Sign from "./Sign";
 import { useNavigate } from "react-router-dom";
 import DoneIcon from "@mui/icons-material/Done";
+
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
+
 function Home({ onSearch }) {
   const navigate = useNavigate();
   const [query, setQuery] = useState("");
@@ -55,6 +59,14 @@ function Home({ onSearch }) {
     },
     mx: "auto",
   };
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
 
   return (
     <>
@@ -74,7 +86,186 @@ function Home({ onSearch }) {
               <img src="./image/ama.png" className="bdcd"></img>
               <div>
                 <button> Home</button>
-                <button> Browse</button>
+                <button
+                  id="basic-button"
+                  aria-controls={open ? "basic-menu" : undefined}
+                  aria-haspopup="true"
+                  aria-expanded={open ? "true" : undefined}
+                  onClick={handleClick}
+                >
+                  Browse
+                </button>
+                <Menu
+                  id="basic-menu"
+                  anchorEl={anchorEl}
+                  open={open}
+                  onClose={handleClose}
+                  MenuListProps={{
+                    "aria-labelledby": "basic-button",
+                  }}
+                >
+                  <p className="poop">AUDIOBOOK CATEGORIES</p>
+                  <div className="dfdd">
+                    <div className="bfbf">
+                      <Button
+                        sx={{ color: "black", fontSize: "11px" }}
+                        onMouseOver={(e) => {
+                          e.target.style.textDecoration = "underline";
+                        }}
+                        onMouseOut={(e) => {
+                          e.target.style.textDecoration = "none";
+                        }}
+                      >
+                        Fiction
+                      </Button>
+                      <Button
+                        sx={{ color: "black", fontSize: "11px" }}
+                        onMouseOver={(e) => {
+                          e.target.style.textDecoration = "underline";
+                        }}
+                        onMouseOut={(e) => {
+                          e.target.style.textDecoration = "none";
+                        }}
+                      >
+                        Sci-Fi & Fantasy
+                      </Button>
+                      <Button
+                        sx={{ color: "black", fontSize: "11px" }}
+                        onMouseOver={(e) => {
+                          e.target.style.textDecoration = "underline";
+                        }}
+                        onMouseOut={(e) => {
+                          e.target.style.textDecoration = "none";
+                        }}
+                      >
+                        Mysteries & Thrillers
+                      </Button>
+                      <Button
+                        sx={{ color: "black", fontSize: "11px" }}
+                        onMouseOver={(e) => {
+                          e.target.style.textDecoration = "underline";
+                        }}
+                        onMouseOut={(e) => {
+                          e.target.style.textDecoration = "none";
+                        }}
+                      >
+                        Self-Development
+                      </Button>
+                      <Button
+                        sx={{ color: "black", fontSize: "11px" }}
+                        onMouseOver={(e) => {
+                          e.target.style.textDecoration = "underline";
+                        }}
+                        onMouseOut={(e) => {
+                          e.target.style.textDecoration = "none";
+                        }}
+                      >
+                        Biographies & Memoirs
+                      </Button>
+                      <Button
+                        sx={{ color: "black", fontSize: "11px" }}
+                        onMouseOver={(e) => {
+                          e.target.style.textDecoration = "underline";
+                        }}
+                        onMouseOut={(e) => {
+                          e.target.style.textDecoration = "none";
+                        }}
+                      >
+                        Hindi Audiobooks
+                      </Button>
+                      <Button
+                        sx={{ color: "black", fontSize: "11px" }}
+                        onMouseOver={(e) => {
+                          e.target.style.textDecoration = "underline";
+                        }}
+                        onMouseOut={(e) => {
+                          e.target.style.textDecoration = "none";
+                        }}
+                      >
+                        New Releases
+                      </Button>
+                    </div>
+                    <div className="bfbf">
+                      <Button
+                        sx={{ color: "black", fontSize: "11px" }}
+                        onMouseOver={(e) => {
+                          e.target.style.textDecoration = "underline";
+                        }}
+                        onMouseOut={(e) => {
+                          e.target.style.textDecoration = "none";
+                        }}
+                      >
+                        Best Sellers
+                      </Button>
+                      <Button
+                        sx={{ color: "black", fontSize: "11px" }}
+                        onMouseOver={(e) => {
+                          e.target.style.textDecoration = "underline";
+                        }}
+                        onMouseOut={(e) => {
+                          e.target.style.textDecoration = "none";
+                        }}
+                      >
+                        All Categories
+                      </Button>
+                      <Button
+                        sx={{ color: "black", fontSize: "11px" }}
+                        onMouseOver={(e) => {
+                          e.target.style.textDecoration = "underline";
+                        }}
+                        onMouseOut={(e) => {
+                          e.target.style.textDecoration = "none";
+                        }}
+                      >
+                        Popular Features
+                      </Button>
+                      <Button
+                        sx={{ color: "black", fontSize: "11px" }}
+                        onMouseOver={(e) => {
+                          e.target.style.textDecoration = "underline";
+                        }}
+                        onMouseOut={(e) => {
+                          e.target.style.textDecoration = "none";
+                        }}
+                      >
+                        Plus Catalogue
+                      </Button>
+                      <Button
+                        sx={{ color: "black", fontSize: "11px" }}
+                        onMouseOver={(e) => {
+                          e.target.style.textDecoration = "underline";
+                        }}
+                        onMouseOut={(e) => {
+                          e.target.style.textDecoration = "none";
+                        }}
+                      >
+                        Podcasts
+                      </Button>
+                      <Button
+                        sx={{ color: "black", fontSize: "11px" }}
+                        onMouseOver={(e) => {
+                          e.target.style.textDecoration = "underline";
+                        }}
+                        onMouseOut={(e) => {
+                          e.target.style.textDecoration = "none";
+                        }}
+                      >
+                        Audible Originals
+                      </Button>
+                      <Button
+                        sx={{ color: "black", fontSize: "11px" }}
+                        onMouseOver={(e) => {
+                          e.target.style.textDecoration = "underline";
+                        }}
+                        onMouseOut={(e) => {
+                          e.target.style.textDecoration = "none";
+                        }}
+                      >
+                        Children's Audiobooks
+                      </Button>
+                    </div>
+                  </div>
+                </Menu>
                 <button> About Memberships</button>
               </div>
             </Grid>
@@ -90,12 +281,12 @@ function Home({ onSearch }) {
                   placeholder="Search..."
                   value={query}
                   onChange={(e) => setQuery(e.target.value)}
-                 style={{
-                  width:'100%',
-                  '@media (max-width: 600px)': {
-                    backgroundColor: 'red',
-                  },
-                 }}
+                  style={{
+                    width: "100%",
+                    "@media (max-width: 600px)": {
+                      backgroundColor: "red",
+                    },
+                  }}
                 />
                 <button onClick={handleSearch}>Search</button>
               </div>
@@ -125,7 +316,10 @@ function Home({ onSearch }) {
                 <p className="p001">Your free, 30-day trial comes with:</p>
 
                 <p className="p000">
-                  <DoneIcon /> 1 credit (2 credits for Amazon Prime members new
+                  <DoneIcon sx={{
+                     '@media (min-width: 600px)': {
+                      fontSize: '10px', }
+                  }}/> 1 credit (2 credits for Amazon Prime members new
                   to Audible), to use on any title of your choice—yours to keep,
                   even if you cancel.
                 </p>
@@ -205,7 +399,7 @@ function Home({ onSearch }) {
             </TabPanel>
           </TabContext>
         </Container>
-        <Box>
+        <Box sx={{ marginTop: "50px" }}>
           <img src="../image/Banner.jpg" className="bb00"></img>
         </Box>
         <p className="p01">Try Audible free</p>

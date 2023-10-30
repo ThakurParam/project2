@@ -2,7 +2,7 @@ import { Box } from '@mui/material';
 import React from 'react'
 import Rating from '@mui/material/Rating';
 import StarIcon from '@mui/icons-material/Star';
-
+import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
 
 const labels = {
     0.5: 'Useless',
@@ -22,14 +22,18 @@ export default function Card({item}) {
         <>
             <Box>
                 <Box>
-                    <img src={item.cover}></img>
+                    <img src={item.cover} className='iiii0'></img>
+                    
                 </Box>
                 <Box>
-                    Sample
+                  <PlayCircleOutlineIcon className='icon' style={{
+                    fontSize:'small',
+                  }}/>  Sample
                 </Box>
                 <Box >
                     <p className='pp1'>Narrated by :</p>
-                    <p className='pp0' >{item.Narratedby}</p>
+                    <p className='pp0' >item.Narratedby</p>
+                    
                     <Rating
                         name="text-feedback"
                         value={value}

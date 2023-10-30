@@ -287,8 +287,25 @@ border-radius: 50%;
   font-size: 13px;
   color: #000000;
 }
+.icon{
+  font-size: small;
+}
+.dfdd{
+  display: flex;
+    flex-direction: row;
+}
+.bfbf{
+  display: grid;
+}
+.poop{
+  margin-left: -120px;
+  font-weight: 700;
+}
 @media screen and (max-width: 600px) {
-  
+  .poop{
+    margin-left: -120px;
+    font-weight: 700;
+  }
   .g00{
     text-align: justify;
     font-size: 15px;
@@ -427,8 +444,19 @@ border-radius: 50%;
   flex-direction: row;
   color: #000000;
 }
-
-
-
-
+.pp1 {
+  font-size: small;
+  margin-top: 1px;
+}
+.pp0 {
+  font-size: small;
+  margin-top: -15px;
+  margin-bottom: 2px;
+}
+.iiii0{
+  width: 80%;
+}
+.icon{
+  font-size: small;
+}
 }
